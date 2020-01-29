@@ -150,5 +150,23 @@ Route::get('lihat/select',function()
     'jenisproduk','harga','jumlah','kualitas','alamat')->first();
 });
 
-//akses menambahkan record
-Route::get('tambah-data/tambah/{kategoriproduk}');
+Route::get('latihan','LatihanController@hallo');
+Route::get('/data-1','LatihanController@loop');
+Route::get('latihan','LatihanController@l');
+
+//crud tabungan
+Route::get('tabungan','TabunganController@index');
+Route::get('tabungan/(id)','TabunganController@show');
+Route::get('tabungan-tambah/id}/{/{nis}/{nama}/{kelas}/{jml}','TabunganController@store');
+Route::get('tabungan-edit/{id}/{nis}/{nama}/{kelas}/{jml}','TabunganController@update');
+Route::get('tabungan-hapus/{id}','TabunganController@delete');
+
+//crud customer
+Route::get('customer','CustomerController@index');
+Route::get('customer/{id}','CustomerController@show');
+Route::get('customer-tambah/{code_customer}/{name}/{email}/{country}/{city}/{address}/{contact_number}','CustomerController@store');
+Route::get('customer-edit/{id}/{code_customer}/{name}/{email}/{country}/{city}/{address}/{contact_number}','CustomerController@update');
+Route::get('customer-hapus/{id}','CustomerController@delete');
+
+
+
