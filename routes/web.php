@@ -169,4 +169,9 @@ Route::get('customer-edit/{id}/{code_customer}/{name}/{email}/{country}/{city}/{
 Route::get('customer-hapus/{id}','CustomerController@delete');
 
 
+//pasing data
+Route::get('pass','PracticeController@pass');
+Route::get('pass1','PracticeController@pass1');
+Route::get('pass2','PracticeController@pass2');
+
 
